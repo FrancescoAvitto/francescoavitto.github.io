@@ -28,7 +28,8 @@ body {
   font-weight: 400;
   color: #6b6b6b;
   overflow-x: hidden;
-  background:linear-gradient(to bottom,#00000044, transparent), url('../img/bg-body.png') ;
+  background:linear-gradient(to bottom,black, transparent), url('../img/bg6.avif') ;
+  backdrop-filter:blur(4px);
   background-repeat:repeat;
   background-size:contain;
 
@@ -52,15 +53,36 @@ a:hover {
   text-decoration: none;
 }
 
-.new-header-section{
-  background:linear-gradient(to top,#00000033, transparent), url('../img/mini-profile-bg-01.jpg') ;
+/* .new-header-section{
+  background: url('../img/newHeader2.avif') ;
+  backdrop-filter:blur(4px);
+  background:linear-gradient(to bottom,#00000044, transparent), url('../img/bg6.avif') ;
+  backdrop-filter:blur(4px);
   min-height:100vh;
   max-height:auto;
   padding-top:40px;
   padding-bottom:40px;
   background-size:cover;
   background-repeat:no-repeat;
+} */
+
+.new-header-section {
+  background: linear-gradient(to bottom, transparent, black), url('../img/newHeader5.avif');
+  backdrop-filter:blur(4px);
+  min-height: 100vh;
+  max-height: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
+
+
+
+
+
+
 
 .img-profilo{
   height:250px;
