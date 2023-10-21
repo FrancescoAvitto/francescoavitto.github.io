@@ -580,8 +580,19 @@ p {
   border-radius:8px;
 
 
+}
+
+#youtube-typescript-img{
+  background-image:url('../img/youtube-typescript-react.png');
+  background-size: cover;
+  width:320px;
+
+  transition: 200ms;
+  border-radius:8px;
+
 
 }
+
 
 #password-strength-img{
   background-image:url('../img/password-strength-img.png');
