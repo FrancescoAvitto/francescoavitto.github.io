@@ -880,3 +880,87 @@ input:focus{
   padding:20px 30px;
   border-radius:30px;
 }
+/* Stack Carousel */
+.stack-carousel-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+}
+
+.stack-track {
+    display: flex;
+    /* Estimated width: 21 items * 2 (duplicated) * 150px approx width each = 6300px, but flex shrinks items. 
+       Let's assume generic wide width or fit-content logic if possible, 
+       but for pure CSS marquee we often need fixed large width or calc.
+       We have 21 original + 21 duplicates = 42 items.
+       Let's say each item is ~150px wide including padding.
+       Total width ~ 6300px.
+    */
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.stack-item {
+    width: 150px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.stack-item i {
+    font-size: 3.5rem; 
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.stack-item:hover {
+    transform: translateY(-5px);
+}
+
+.stack-item:hover i {
+    transform: scale(1.1);
+    color: #98cb00 !important; /* Green highlight */
+    text-shadow: 0 0 10px rgba(152, 203, 0, 0.5);
+}
+
+.stack-item p {
+    color: white;
+    margin: 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.stack-item:hover p {
+    opacity: 1;
+    color: #98cb00;
+}
+
+/* Pause animation on hover for better UX */
+.stack-carousel-container:hover .stack-track {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Move by half the width (the original set) */
+}
+
+/* SVG Icon Styling */
+.stack-item img {
+    width: 60px; /* Adjust size to match previous font size */
+    height: 60px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.stack-item:hover img {
+    transform: scale(1.1);
+    /* Optional: Add a green glow using filter */
+    filter: drop-shadow(0 0 5px rgba(152, 203, 0, 0.8));
+}
