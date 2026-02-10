@@ -1027,3 +1027,24 @@ input:focus {
   /* Optional: Add a green glow using filter */
   filter: drop-shadow(0 0 5px rgba(152, 203, 0, 0.8));
 }
+
+/* Desktop-specific Stack layout */
+@media (min-width: 769px) {
+  .stack-track {
+    justify-content: flex-start;
+    /* Align items with the title on desktop */
+  }
+
+  .stack-track-wrapper {
+    justify-content: flex-start;
+  }
+
+  .stack-row {
+    align-items: center !important;
+    border: 1px solid #98cb00;
+    border-radius: 20px;
+    padding: 20px 10px;
+    margin-bottom: 25px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
