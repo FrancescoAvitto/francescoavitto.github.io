@@ -509,6 +509,18 @@ p {
 
 }
 
+#habit-tracker-react-img {
+  background-image: url('../img/habit-tracker-react-img.png');
+  background-size: cover;
+  background-position: center;
+  width: 320px;
+
+  transition: 200ms;
+  border-radius: 8px;
+
+
+}
+
 
 
 #music-player-img {
